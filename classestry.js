@@ -26,3 +26,19 @@ var car1 = new honda ("accord","coupe");
 console.log(car1.name);
 car1.coldAirIntake();
 car1.tuneUp(56);
+
+class bikes extends honda {
+    constructor(name, bodyStyle, terrain) {
+        super(name, bodyStyle);
+        this._terrain = terrain;
+        this._hp = 150;
+    }
+
+    get terrain() {
+        return this.terrain;
+    }
+}
+
+var magic = new bikes("Yamaha YZ250X", "250cc ", "dirt");
+console.log(magic.name)
+magic.tuneUp(5);
